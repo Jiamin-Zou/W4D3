@@ -6,11 +6,11 @@ class Piece
     end
 
     def to_s
-
+        " #{symbol} "
     end
 
     def empty?
-        self.is_a?(Piece)
+        self.is_a?(NullPiece)
     end
 
     def valid_moves
