@@ -1,8 +1,7 @@
 require_relative "piece.rb"
 
 class NullPiece < Piece
-
-include "Singleton"
+    include "Singleton"
 
     def initialize
     end

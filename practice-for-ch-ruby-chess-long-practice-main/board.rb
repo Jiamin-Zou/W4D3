@@ -2,7 +2,9 @@ require_relative "piece"
 
 class Board
     def initialize
+        attr_reader :rows
         @rows = Array.new(8) {Array.new(8)}
+        @null_piece = NullPiece.instance
         self.set_up
     end
 
@@ -26,6 +28,7 @@ class Board
     end
 
     private
+    attr_reader :null_piece
     def set_up
         (0...@rows.length).each do |row|
             (0...@rows.length).each do |col|
