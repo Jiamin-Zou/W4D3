@@ -58,10 +58,10 @@ module Slideable
     ].freeze
 
     DIAGONAL_DIRS = [
-        [1, -1]
-        [1, 1]
-        [-1, 1]
+        [1, -1],
+        [1, 1],
+        [-1, 1],
         [-1, -1]
     ].freeze
-
+end
     

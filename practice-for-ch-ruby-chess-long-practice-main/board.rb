@@ -6,6 +6,8 @@ require_relative "knight"
 require_relative "king"
 require_relative "pawn"
 require_relative "null_piece"
+require_relative "slideable"
+require_relative "stepable"
 
 class Board
     attr_reader :rows
@@ -55,4 +57,3 @@ class Board
         end
     end
 end
-b = Board.new

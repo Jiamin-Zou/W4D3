@@ -10,7 +10,7 @@ class Knight < Piece
 
     protected
     def move_diffs
-        MOVE_DIFFS = [
+        [
             [-2, -1],
             [-2, 1],
             [2, 1],
@@ -19,7 +19,7 @@ class Knight < Piece
             [1, -2],
             [-1, -2],
             [-1, 2]
-    ].freeze
+        ]
     end
 
 end

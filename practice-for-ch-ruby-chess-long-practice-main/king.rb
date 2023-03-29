@@ -10,7 +10,7 @@ class King < Piece
 
     protected
     def move_diffs
-        MOVE_DIFFS = [
+        [
             [-1, -1],
             [-1, 0],
             [-1, 1],
@@ -19,6 +19,6 @@ class King < Piece
             [1, -1],
             [1, 0],
             [1, 1]
-    ].freeze
+        ]
     end
 end
