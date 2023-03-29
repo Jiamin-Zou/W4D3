@@ -16,7 +16,7 @@ module Slideable
         moves = []
         self.move_dirs.each do |d|
             dx, dy = d
-            moves << self.grow_unlocked_moves_in_dir(dx, dy)
+            moves += self.grow_unlocked_moves_in_dir(dx, dy)
         end
         
         moves
@@ -28,7 +28,23 @@ module Slideable
     end
 
     def grow_unlocked_moves_in_dir(dx, dy)
-        
+        final_pos = []
+        pos = self.pos
+        while @board.valid_pos?(pos)
+            pos[0] += dx 
+            pos[1] += dy
+            piece = board[pos]
+            if piece.is_a?(NullPiece)
+                final_pos << pos
+            elsif piece.color != self.color
+                final_pos << pos
+                break
+            else
+                break
+            end
+        end
+        return final_pos
+            
     end
 
     HORIZONTAL_DIRS = [
